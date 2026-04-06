@@ -1,6 +1,10 @@
 # uptime-kuma-api
 
-Lightweight read-only API proxy for [Uptime Kuma](https://github.com/louislam/uptime-kuma) monitor data. Designed to be deployed as a sidecar container alongside each Uptime Kuma instance.
+Lightweight read-only API proxy for [Uptime Kuma](https://github.com/louislam/uptime-kuma) monitor data. Designed to be deployed as a sidecar container alongside each Uptime Kuma instance. Part of [uptime-kuma-status](https://github.com/wvogel/uptime-kuma-status).
+
+## Architecture
+
+![Architecture](docs/architecture-en.svg)
 
 ## Quick Start
 

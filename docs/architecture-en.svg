@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 280" width="680" height="280" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,sans-serif">
+  <defs>
+    <marker id="a-en" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6" fill="none" stroke="#007aff" stroke-width="1.2"/>
+    </marker>
+    <marker id="a-gray-en" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6" fill="none" stroke="#666" stroke-width="1.2"/>
+    </marker>
+  </defs>
+
+  <!-- Background -->
+  <rect width="680" height="280" rx="12" fill="#f8f8fa" stroke="#d2d2d7" stroke-width="1"/>
+
+  <!-- Title -->
+  <text x="340" y="32" text-anchor="middle" font-size="16" font-weight="700" fill="#1d1d1f">Architecture — uptime-kuma-api</text>
+
+  <!-- Uptime Status -->
+  <rect x="30" y="70" width="200" height="70" rx="8" fill="#fff3e0" stroke="#ff9f0a" stroke-width="1"/>
+  <text x="130" y="98" text-anchor="middle" font-size="12" font-weight="600" fill="#1d1d1f">uptime-status-admin</text>
+  <text x="130" y="116" text-anchor="middle" font-size="10" fill="#6e6e73">Fetcher (every 10s)</text>
+
+  <!-- Kuma API -->
+  <rect x="310" y="60" width="160" height="90" rx="8" fill="#e8f9ee" stroke="#34c759" stroke-width="1"/>
+  <text x="390" y="88" text-anchor="middle" font-size="12" font-weight="700" fill="#1d1d1f">uptime-kuma-api</text>
+  <text x="390" y="106" text-anchor="middle" font-size="10" fill="#6e6e73">FastAPI, Port 80</text>
+  <text x="390" y="122" text-anchor="middle" font-size="10" fill="#6e6e73">X-API-Key Auth</text>
+  <text x="390" y="138" text-anchor="middle" font-size="10" fill="#6e6e73">Optional: IP Filter</text>
+
+  <!-- Arrow status -> kuma-api -->
+  <line x1="230" y1="105" x2="310" y2="105" stroke="#007aff" stroke-width="1.4" marker-end="url(#a-en)"/>
+  <text x="270" y="98" text-anchor="middle" font-size="9" fill="#007aff">HTTP</text>
+
+  <!-- MariaDB -->
+  <rect x="550" y="70" width="100" height="70" rx="8" fill="#f5f5f7" stroke="#d2d2d7" stroke-width="1"/>
+  <text x="600" y="100" text-anchor="middle" font-size="12" font-weight="600" fill="#1d1d1f">MariaDB</text>
+  <text x="600" y="116" text-anchor="middle" font-size="10" fill="#6e6e73">Kuma DB</text>
+
+  <!-- Arrow kuma-api -> MariaDB -->
+  <line x1="470" y1="105" x2="550" y2="105" stroke="#666" stroke-width="1.2" marker-end="url(#a-gray-en)"/>
+  <text x="510" y="98" text-anchor="middle" font-size="9" fill="#6e6e73">SQL</text>
+
+  <!-- Uptime Kuma -->
+  <rect x="550" y="170" width="100" height="56" rx="8" fill="#fff" stroke="#d2d2d7" stroke-width="1"/>
+  <text x="600" y="194" text-anchor="middle" font-size="12" font-weight="600" fill="#1d1d1f">Uptime Kuma</text>
+  <text x="600" y="210" text-anchor="middle" font-size="10" fill="#6e6e73">Monitoring</text>
+
+  <!-- Arrow Kuma -> MariaDB -->
+  <line x1="600" y1="170" x2="600" y2="140" stroke="#666" stroke-width="1.2" marker-end="url(#a-gray-en)"/>
+
+  <!-- Docker compose box -->
+  <rect x="290" y="170" width="200" height="56" rx="8" fill="none" stroke="#d2d2d7" stroke-width="1" stroke-dasharray="4,3"/>
+  <text x="390" y="194" text-anchor="middle" font-size="10" fill="#6e6e73">Same docker-compose.yml</text>
+  <text x="390" y="210" text-anchor="middle" font-size="10" fill="#6e6e73">Sidecar container</text>
+
+  <!-- Legend -->
+  <text x="40" y="260" font-size="10" font-weight="600" fill="#6e6e73">Read-only access to monitor + heartbeat tables</text>
+</svg>
