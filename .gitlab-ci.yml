@@ -12,7 +12,7 @@ build_image:
     IMAGE: ghcr.io/wvogel/uptime-kuma-api
   script:
     - mkdir -p /kaniko/.docker
-    - echo "{\"auths\":{\"ghcr.io\":{\"auth\":\"$(echo -n wvogel:${GHCR_TOKEN} | base64)\"}}}" > /kaniko/.docker/config.json
+    - echo "{\"auths\":{\"ghcr.io\":{\"username\":\"wvogel\",\"password\":\"${GHCR_TOKEN}\"}}}" > /kaniko/.docker/config.json
     - /kaniko/executor
       --context "$CI_PROJECT_DIR"
       --dockerfile "$CI_PROJECT_DIR/Dockerfile"
