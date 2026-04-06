@@ -7,7 +7,7 @@ build_image:
     name: gcr.io/kaniko-project/executor:v1.23.2-debug
     entrypoint: [""]
   only:
-    - main
+    - tags
   variables:
     IMAGE: ghcr.io/wvogel/uptime-kuma-api
   script:
@@ -17,4 +17,4 @@ build_image:
       --context "$CI_PROJECT_DIR"
       --dockerfile "$CI_PROJECT_DIR/Dockerfile"
       --destination "$IMAGE:latest"
-      --destination "$IMAGE:$CI_COMMIT_SHORT_SHA"
+      --destination "$IMAGE:$CI_COMMIT_TAG"
