@@ -2,6 +2,14 @@
 
 Lightweight read-only API proxy for [Uptime Kuma](https://github.com/louislam/uptime-kuma) monitor data. Designed to be deployed as a sidecar container alongside each Uptime Kuma instance. Part of [uptime-kuma-status](https://github.com/wvogel/uptime-kuma-status).
 
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
+[![Python](https://img.shields.io/badge/python-3.12-blue.svg)](https://www.python.org/)
+[![FastAPI](https://img.shields.io/badge/FastAPI-0.115-009688.svg)](https://fastapi.tiangolo.com/)
+[![Docker](https://img.shields.io/badge/docker-ghcr.io-2496ED.svg?logo=docker&logoColor=white)](https://github.com/wvogel/uptime-kuma-api/pkgs/container/uptime-kuma-api)
+[![Uptime Kuma](https://img.shields.io/badge/Uptime%20Kuma-compatible-5CDD8B.svg)](https://github.com/louislam/uptime-kuma)
+[![Changelog](https://img.shields.io/badge/changelog-keepachangelog-orange.svg)](CHANGELOG.md)
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](CONTRIBUTING.md)
+
 ## Architecture
 
 ![Architecture](docs/architecture-en.svg)

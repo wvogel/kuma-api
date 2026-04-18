@@ -1,0 +1,38 @@
+name: Bug Report
+description: Report a reproducible problem
+labels: [bug]
+body:
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What happened?
+      description: What did you expect, and what happened instead?
+    validations:
+      required: true
+  - type: textarea
+    id: reproduce
+    attributes:
+      label: Steps to reproduce
+      placeholder: |
+        1. Start the container with ...
+        2. Call `GET /api/monitors` ...
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: uptime-kuma-api version / commit
+    validations:
+      required: true
+  - type: input
+    id: kuma-version
+    attributes:
+      label: Uptime Kuma version
+    validations:
+      required: true
+  - type: textarea
+    id: logs
+    attributes:
+      label: Logs
+      description: Container logs with `LOG_LEVEL=debug` if possible
+      render: shell
