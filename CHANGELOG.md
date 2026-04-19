@@ -7,6 +7,16 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.1.1] - 2026-04-19
+
+### Changed
+- Bumped dependencies: FastAPI 0.136.0, uvicorn 0.44.0, aiomysql 0.3.2
+- Docker base image bumped to Python 3.14-slim
+- GitHub Actions: `actions/checkout` v6, `docker/setup-buildx-action` v4, `docker/build-push-action` v7
+
+### Added
+- Full open-source project meta: `CHANGELOG.md`, `CONTRIBUTING.md`, `SECURITY.md`, `CODE_OF_CONDUCT.md`, GitHub issue/PR templates, Dependabot config, Docker build GitHub Actions workflow, README badges
+
 ## [0.1.0] - 2026-04-06
 
 Initial release.
